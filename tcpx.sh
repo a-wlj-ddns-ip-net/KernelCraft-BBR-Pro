@@ -6,7 +6,7 @@ export PATH
 #	Description: BBR+BBRplus+Lotserver
 #	Version: 101.0.0.0
 #	Author: 千影,cx9208,YLX,TuDieDie
-#	更新内容及反馈:  https://www.tudiedie.com
+#	土爹爹博客:  https://www.tudiedie.com
 #=================================================
 
 # RED='\033[0;31m'
