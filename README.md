@@ -3,7 +3,7 @@
 ![Linux一键安装常见最新内核脚本 BBR-BBRPLUS-BBR2-BBR3-LotServer](https://github.com/tudiedie/Linux-NetSpeed-TuDieDie/assets/116735322/3c7de340-e209-4a89-b533-753aa0909172)
 
 ## 一键加速脚本使用教程 
-### 预先安装wget下载工具，则执行命令：
+### 安装wget下载工具，则执行命令：
 ```
 yum -y install wget #CentOS/RedHat
 ```
