@@ -79,85 +79,85 @@ sysctl net.core.default_qdisc
 `sysctl --system`
 
 ### 更新日志
-1.3.2.7 更新bbr的c7,c8,d9,d10 升级到5.5.3内核。
+1.3.2.7 更新bbr的c7,c8,d9,d10 升级到5.5.3内核；
 <br>
-1.3.2.8 更新bbr的c6,c7,c8,d8,d9,d10 升级到5.5.5内核。
+1.3.2.8 更新bbr的c6,c7,c8,d8,d9,d10 升级到5.5.5内核；
 <br>
-1.3.2.9 更新bbr,zen的c7,d10 升级到5.5.6内核 xanmod的c7,d10 升级到5.5.4内核 更新部分写法。
+1.3.2.9 更新bbr,zen的c7,d10 升级到5.5.6内核 xanmod的c7,d10 升级到5.5.4内核 更新部分写法；
 <br>
-1.3.2.10 xanmod的c7,d10 升级到5.5.6内核。
+1.3.2.10 xanmod的c7,d10 升级到5.5.6内核；
 <br>
-1.3.2.11 两个版本可以互相切换。
+1.3.2.11 两个版本可以互相切换；
 <br>
-1.3.2.13 更新bbr c7,d10 升级到5.5.7内核 bbrplus降级到4.14.129 不再维护。
+1.3.2.13 更新bbr c7,d10 升级到5.5.7内核 bbrplus降级到4.14.129 不再维护；
 <br>
-1.3.2.14 修复debian/ubuntu bbrplus BUG bbrplus安装方法和安装内核都和原作者一致了 我彻底甩锅。
+1.3.2.14 修复debian/ubuntu bbrplus BUG bbrplus安装方法和安装内核都和原作者一致了 我彻底甩锅；
 <br>
-1.3.2.15 xanmod的c7,d10 升级到5.5.6内核 xanmod5 xanmod下载链接 改为onedrive 若有问题请反馈。
+1.3.2.15 xanmod的c7,d10 升级到5.5.6内核 xanmod5 xanmod下载链接 改为onedrive 若有问题请反馈；
 <br>
-1.3.2.17 bbr原版,xanmod,Zen内核c7,d10分别升级到5.5.8 均为onedrive链接。
+1.3.2.17 bbr原版,xanmod,Zen内核c7,d10分别升级到5.5.8 均为onedrive链接；
 <br>
-1.3.2.18 bbrplus4.14.173 centos7,debian10 均为onedrive链接。
+1.3.2.18 bbrplus4.14.173 centos7,debian10 均为onedrive链接；
 <br>
-1.3.2.20 bbr原版,Zen内核c7,d10分别升级到5.5.10 均为onedrive链接  适配oracle centos7测试。
+1.3.2.20 bbr原版,Zen内核c7,d10分别升级到5.5.10 均为onedrive链接  适配oracle centos7测试；
 <br>
-1.3.2.21 bbr原版,c7,d10分别升级到5.6.0 均为onedrive链接。
+1.3.2.21 bbr原版,c7,d10分别升级到5.6.0 均为onedrive链接；
 <br>
-1.3.2.28 bbr原版升级到5.6.15 添加U20支持 均为onedrive链接。
+1.3.2.28 bbr原版升级到5.6.15 添加U20支持 均为onedrive链接；
 <br>
-1.3.2.29 bbrplus新版升级到bbrplus4.14.182 均为onedrive链接。
+1.3.2.29 bbrplus新版升级到bbrplus4.14.182 均为onedrive链接；
 <br>
-1.3.2.34 xanmod C7升级到5.7.2，debian及ubuntu用的官方编译的文件，没限制常用的debian和ubuntu版本，是否翻车自己测试，增加切换到秋水BBR功能。
+1.3.2.34 xanmod C7升级到5.7.2，debian及ubuntu用的官方编译的文件，没限制常用的debian和ubuntu版本，是否翻车自己测试，增加切换到秋水BBR功能；
 <br>
-1.3.2.35 xanmod debian及ubuntu用的官方编译的文件5.7.3，这次直接用的官方的下载链接。
+1.3.2.35 xanmod debian及ubuntu用的官方编译的文件5.7.3，这次直接用的官方的下载链接；
 <br>
-1.3.2.36 更换锐速授权地址。
+1.3.2.36 更换锐速授权地址；
 <br>
-1.3.2.37 xanmod更新到5.7.4，debian及ubuntu用的官方编译的文件，原版BBR centos用的elrepo版本。
+1.3.2.37 xanmod更新到5.7.4，debian及ubuntu用的官方编译的文件，原版BBR centos用的elrepo版本；
 <br>
-1.3.2.45 xanmod更新到5.8.10，原版BBR centos7更新到5.8.10，增加切换到一键DD脚本。
+1.3.2.45 xanmod更新到5.8.10，原版BBR centos7更新到5.8.10，增加切换到一键DD脚本；
 <br>
-1.3.2.51 去除centos6的支持，去除Zen内核，debian和ubuntu使用同一内核，增加fq_pie选项。
+1.3.2.51 去除centos6的支持，去除Zen内核，debian和ubuntu使用同一内核，增加fq_pie选项；
 <br>
-1.3.2.53 添加johnrosen1的优化方案，去除默认优化方案的tcp_fastopen。
+1.3.2.53 添加johnrosen1的优化方案，去除默认优化方案的tcp_fastopen；
 <br>
-1.3.2.56 注释net.ipv4.ip_forward。
+1.3.2.56 注释net.ipv4.ip_forward；
 <br>
-1.3.2.57 仅更新了可卸载版本,增加headers的卸载测试，应用了bbr原版和xanmod。
+1.3.2.57 仅更新了可卸载版本,增加headers的卸载测试，应用了bbr原版和xanmod；
 <br>
-1.3.2.59 大量调整优化代码，新的优化方案不再叠加并支持卸载，调整bbr启动，不会卸载优化。
+1.3.2.59 大量调整优化代码，新的优化方案不再叠加并支持卸载，调整bbr启动，不会卸载优化；
 <br>
-1.3.2.63 下架bbr2方案，等正式版本再考虑添加，不卸载内核版本添加官方稳定内核，官方最新内核，XANMOD官方内核，XANMOD官方高响应内核，debian官方cloud内核。
+1.3.2.63 下架bbr2方案，等正式版本再考虑添加，不卸载内核版本添加官方稳定内核，官方最新内核，XANMOD官方内核，XANMOD官方高响应内核，debian官方cloud内核；
 <br>
-1.3.2.68 XANMOD 5.10.9及以后内核支持BBR2 增加IPv6处理。
+1.3.2.68 XANMOD 5.10.9及以后内核支持BBR2 增加IPv6处理；
 <br>
-13.2.74 更新新版bbrplus,来自github UJX6N的编译，兼容bbr+fq/fq_pie/cake仅限Cloud VMs。
+13.2.74 更新新版bbrplus,来自github UJX6N的编译，兼容bbr+fq/fq_pie/cake仅限Cloud VMs；
 <br>
-13.2.76 去除CLOUD内核，由BBRPLUS新版替代，增加下载地址检测(不包含锐速内核)。
+13.2.76 去除CLOUD内核，由BBRPLUS新版替代，增加下载地址检测(不包含锐速内核)；
 <br>
-13.2.77 部分连接解析为官方连接 见上面版本号对应关系。
+13.2.77 部分连接解析为官方连接 见上面版本号对应关系；
 <br>
-13.2.86 原版内核支持debian系arm64内核。
+13.2.86 原版内核支持debian系arm64内核；
 <br>
-13.2.93 bbrplus新版改为UJX6N的源，我不再维护。
+13.2.93 bbrplus新版改为UJX6N的源，我不再维护；
 <br>
-13.2.96 不卸载版本debian/ubuntu增加zen内核。
+13.2.96 不卸载版本debian/ubuntu增加zen内核；
 <br>
-13.2.97 不卸载版本增加查看排序功能和删除保留指定内核功能。
+13.2.97 不卸载版本增加查看排序功能和删除保留指定内核功能；
 <br>
-13.2.101/102 尝试添加cn下载地址加速,更换锐速接口。
+13.2.101/102 尝试添加cn下载地址加速，更换锐速接口；
 <br>
-13.2.104 bbrplus新版改为UJX6N的5.15版本。
+13.2.104 bbrplus新版改为UJX6N的5.15版本；
 <br>
-100.0.0.0 版本号从原脚本岔开。
+100.0.0.0 版本号从原脚本岔开；
 <br>
-100.0.1.12 bbrplus到6.0，tcpx xanmod main区分CPU。
+100.0.1.12 bbrplus到6.0，tcpx xanmod main区分CPU；
 <br>
-100.0.1.15 修复john优化方案aws ipv6问题。
+100.0.1.15 修复john优化方案aws ipv6问题；
 <br>
-100.0.1.25 下架xanmod自编译版本，支持debian和centos的通用系统安装内核如Kali，其他一些调整。
+100.0.1.25 下架xanmod自编译版本，支持debian和centos的通用系统安装内核如Kali，其他一些调整；
 <br>
-无大内容更新见上面版本号对应关系。
+无大内容更新见上面版本号对应关系；
 <br>
 …….
 <br>
