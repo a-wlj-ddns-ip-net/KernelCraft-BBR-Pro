@@ -1,4 +1,4 @@
-## Linux一键安装常见/最新内核脚本 LotServer/BBRPLUS/BBR2/BBR3
+## Linux一键安装常见/最新内核脚本 BBR/BBRPLUS/BBR2/BBR3/LotServer
 ## 一键加速脚本使用教程 
 ### 预先安装wget下载工具，则执行命令：
 ```
