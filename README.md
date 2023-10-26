@@ -1,5 +1,6 @@
 ## Linux一键安装常见/最新内核脚本 BBR/BBRPLUS/BBR2/BBR3/LotServer
 
+![Linux一键安装常见最新内核脚本 BBR-BBRPLUS-BBR2-BBR3-LotServer](https://github.com/tudiedie/Linux-NetSpeed-TuDieDie/assets/116735322/0c6a8c19-177d-4e48-b7a6-0d5403398e26)
 
 ## 一键加速脚本使用教程 
 ### 安装wget下载工具，则执行命令：
