@@ -3,10 +3,10 @@
 
 预先准备
 ```
-centos：yum install ca-certificates wget -y && update-ca-trust force-enable
+yum -y install wget #CentOS
 ```
 ```
-debian/ubuntu：apt-get install ca-certificates wget -y && update-ca-certificates
+apt-get install wget #Debian/Ubuntu
 ```
 不卸载内核版本
 
