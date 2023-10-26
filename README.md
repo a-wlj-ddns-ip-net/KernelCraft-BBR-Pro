@@ -1,7 +1,6 @@
 ## Linux一键安装常见/最新内核脚本 LotServer/BBRPLUS/BBR2/BBR3
-### 执行命令如下：
 
-预先安装wget工具：
+预先安装wget工具，则执行以下命令：
 ```
 yum -y install wget #CentOS
 ```
