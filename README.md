@@ -2,7 +2,7 @@
 
 ### 预先安装wget下载工具，则执行以下命令：
 ```
-yum -y install wget #CentOS
+yum -y install wget #CentOS/RedHat
 ```
 ```
 apt-get install wget #Debian/Ubuntu
