@@ -16,7 +16,7 @@ export PATH
 # PLAIN='\033[0m'
 
 sh_ver="100.0.1.26"
-github="raw.githubusercontent.com/ylx2016/Linux-NetSpeed/master"
+github="raw.githubusercontent.com/tudiedie/Linux-NetSpeed/master"
 
 imgurl=""
 headurl=""
@@ -163,17 +163,17 @@ installbbr() {
     if [[ ${version} == "7" ]]; then
       if [[ ${bit} == "x86_64" ]]; then
         echo -e "如果下载地址出错，可能当前正在更新，超过半天还是出错请反馈，大陆自行解决污染问题"
-        #github_ver=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}' | awk -F '[_]' '{print $3}')
-        github_tag=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep 'Centos_Kernel' | grep '_latest_bbr_' | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}')
-        github_ver=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep 'headers' | awk -F '"' '{print $4}' | awk -F '[/]' '{print $9}' | awk -F '[-]' '{print $3}')
+        #github_ver=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}' | awk -F '[_]' '{print $3}')
+        github_tag=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep 'Centos_Kernel' | grep '_latest_bbr_' | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}')
+        github_ver=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep 'headers' | awk -F '"' '{print $4}' | awk -F '[/]' '{print $9}' | awk -F '[-]' '{print $3}')
         check_empty $github_ver
         echo -e "获取的版本号为:${Green_font_prefix}${github_ver}${Font_color_suffix}"
         kernel_version=$github_ver
         detele_kernel_head
-        headurl=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep 'headers' | awk -F '"' '{print $4}')
-        imgurl=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep -v 'headers' | grep -v 'devel' | awk -F '"' '{print $4}')
-        #headurl=https://github.com/ylx2016/kernel/releases/download/$github_tag/kernel-headers-${github_ver}-1.x86_64.rpm
-        #imgurl=https://github.com/ylx2016/kernel/releases/download/$github_tag/kernel-${github_ver}-1.x86_64.rpm
+        headurl=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep 'headers' | awk -F '"' '{print $4}')
+        imgurl=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep -v 'headers' | grep -v 'devel' | awk -F '"' '{print $4}')
+        #headurl=https://github.com/tudiedie/kernel/releases/download/$github_tag/kernel-headers-${github_ver}-1.x86_64.rpm
+        #imgurl=https://github.com/tudiedie/kernel/releases/download/$github_tag/kernel-${github_ver}-1.x86_64.rpm
 
         check_empty $imgurl
         headurl=$(check_cn $headurl)
@@ -191,16 +191,16 @@ installbbr() {
   elif [[ "${OS_type}" == "Debian" ]]; then
     if [[ ${bit} == "x86_64" ]]; then
       echo -e "如果下载地址出错，可能当前正在更新，超过半天还是出错请反馈，大陆自行解决污染问题"
-      github_tag=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep 'Debian_Kernel' | grep '_latest_bbr_' | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}')
-      github_ver=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'deb' | grep 'headers' | awk -F '"' '{print $4}' | awk -F '[/]' '{print $9}' | awk -F '[-]' '{print $3}' | awk -F '[_]' '{print $1}')
+      github_tag=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep 'Debian_Kernel' | grep '_latest_bbr_' | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}')
+      github_ver=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'deb' | grep 'headers' | awk -F '"' '{print $4}' | awk -F '[/]' '{print $9}' | awk -F '[-]' '{print $3}' | awk -F '[_]' '{print $1}')
       check_empty $github_ver
       echo -e "获取的版本号为:${Green_font_prefix}${github_ver}${Font_color_suffix}"
       kernel_version=$github_ver
       detele_kernel_head
-      headurl=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'deb' | grep 'headers' | awk -F '"' '{print $4}')
-      imgurl=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'deb' | grep -v 'headers' | grep -v 'devel' | awk -F '"' '{print $4}')
-      #headurl=https://github.com/ylx2016/kernel/releases/download/$github_tag/linux-headers-${github_ver}_${github_ver}-1_amd64.deb
-      #imgurl=https://github.com/ylx2016/kernel/releases/download/$github_tag/linux-image-${github_ver}_${github_ver}-1_amd64.deb
+      headurl=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'deb' | grep 'headers' | awk -F '"' '{print $4}')
+      imgurl=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'deb' | grep -v 'headers' | grep -v 'devel' | awk -F '"' '{print $4}')
+      #headurl=https://github.com/tudiedie/kernel/releases/download/$github_tag/linux-headers-${github_ver}_${github_ver}-1_amd64.deb
+      #imgurl=https://github.com/tudiedie/kernel/releases/download/$github_tag/linux-image-${github_ver}_${github_ver}-1_amd64.deb
 
       headurl=$(check_cn $headurl)
       imgurl=$(check_cn $imgurl)
@@ -211,15 +211,15 @@ installbbr() {
       dpkg -i linux-headers-d10.deb
     elif [[ ${bit} == "aarch64" ]]; then
       echo -e "如果下载地址出错，可能当前正在更新，超过半天还是出错请反馈，大陆自行解决污染问题"
-      github_tag=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep 'Debian_Kernel' | grep '_arm64_' | grep '_bbr_' | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}')
-      github_ver=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'deb' | grep 'headers' | awk -F '"' '{print $4}' | awk -F '[/]' '{print $9}' | awk -F '[-]' '{print $3}' | awk -F '[_]' '{print $1}')
+      github_tag=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep 'Debian_Kernel' | grep '_arm64_' | grep '_bbr_' | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}')
+      github_ver=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'deb' | grep 'headers' | awk -F '"' '{print $4}' | awk -F '[/]' '{print $9}' | awk -F '[-]' '{print $3}' | awk -F '[_]' '{print $1}')
       echo -e "获取的版本号为:${Green_font_prefix}${github_ver}${Font_color_suffix}"
       kernel_version=$github_ver
       detele_kernel_head
-      headurl=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'deb' | grep 'headers' | awk -F '"' '{print $4}')
-      imgurl=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'deb' | grep -v 'headers' | grep -v 'devel' | awk -F '"' '{print $4}')
-      #headurl=https://github.com/ylx2016/kernel/releases/download/$github_tag/linux-headers-${github_ver}_${github_ver}-1_amd64.deb
-      #imgurl=https://github.com/ylx2016/kernel/releases/download/$github_tag/linux-image-${github_ver}_${github_ver}-1_amd64.deb
+      headurl=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'deb' | grep 'headers' | awk -F '"' '{print $4}')
+      imgurl=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'deb' | grep -v 'headers' | grep -v 'devel' | awk -F '"' '{print $4}')
+      #headurl=https://github.com/tudiedie/kernel/releases/download/$github_tag/linux-headers-${github_ver}_${github_ver}-1_amd64.deb
+      #imgurl=https://github.com/tudiedie/kernel/releases/download/$github_tag/linux-image-${github_ver}_${github_ver}-1_amd64.deb
 
       check_empty $imgurl
       headurl=$(check_cn $headurl)
@@ -406,7 +406,7 @@ installlot() {
 #安装xanmod内核  from xanmod.org
 installxanmod() {
   echo -e "xanmod这个自编译版本不维护了，后续请用官方编译版本，知悉."
-  #https://api.github.com/repos/ylx2016/kernel/releases?page=1&per_page=100
+  #https://api.github.com/repos/tudiedie/kernel/releases?page=1&per_page=100
   #releases?page=1&per_page=100
   kernel_version="5.5.1-xanmod1"
   bit=$(uname -m)
@@ -419,13 +419,13 @@ installxanmod() {
     if [[ ${version} == "7" ]]; then
       if [[ ${bit} == "x86_64" ]]; then
         echo -e "如果下载地址出错，可能当前正在更新，超过半天还是出错请反馈，大陆自行解决污染问题"
-        github_tag=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep 'Centos_Kernel' | grep '_lts_latest_' | grep 'xanmod' | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}')
-        github_ver=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep 'headers' | awk -F '"' '{print $4}' | awk -F '[/]' '{print $9}' | awk -F '[-]' '{print $3}')
+        github_tag=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep 'Centos_Kernel' | grep '_lts_latest_' | grep 'xanmod' | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}')
+        github_ver=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep 'headers' | awk -F '"' '{print $4}' | awk -F '[/]' '{print $9}' | awk -F '[-]' '{print $3}')
         echo -e "获取的版本号为:${Green_font_prefix}${github_ver}${Font_color_suffix}"
         kernel_version=$github_ver
         detele_kernel_head
-        headurl=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep 'headers' | awk -F '"' '{print $4}')
-        imgurl=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep -v 'headers' | grep -v 'devel' | awk -F '"' '{print $4}')
+        headurl=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep 'headers' | awk -F '"' '{print $4}')
+        imgurl=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep -v 'headers' | grep -v 'devel' | awk -F '"' '{print $4}')
 
         headurl=$(check_cn $headurl)
         imgurl=$(check_cn $imgurl)
@@ -439,13 +439,13 @@ installxanmod() {
       fi
     elif [[ ${version} == "8" ]]; then
       echo -e "如果下载地址出错，可能当前正在更新，超过半天还是出错请反馈，大陆自行解决污染问题"
-      github_tag=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep 'Centos_Kernel' | grep '_lts_C8_latest_' | grep 'xanmod' | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}')
-      github_ver=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep 'headers' | awk -F '"' '{print $4}' | awk -F '[/]' '{print $9}' | awk -F '[-]' '{print $3}')
+      github_tag=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep 'Centos_Kernel' | grep '_lts_C8_latest_' | grep 'xanmod' | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}')
+      github_ver=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep 'headers' | awk -F '"' '{print $4}' | awk -F '[/]' '{print $9}' | awk -F '[-]' '{print $3}')
       echo -e "获取的版本号为:${Green_font_prefix}${github_ver}${Font_color_suffix}"
       kernel_version=$github_ver
       detele_kernel_head
-      headurl=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep 'headers' | awk -F '"' '{print $4}')
-      imgurl=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep -v 'headers' | grep -v 'devel' | awk -F '"' '{print $4}')
+      headurl=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep 'headers' | awk -F '"' '{print $4}')
+      imgurl=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep -v 'headers' | grep -v 'devel' | awk -F '"' '{print $4}')
 
       headurl=$(check_cn $headurl)
       imgurl=$(check_cn $imgurl)
@@ -460,8 +460,8 @@ installxanmod() {
 
     if [[ ${bit} == "x86_64" ]]; then
       echo -e "如果下载地址出错，可能当前正在更新，超过半天还是出错请反馈，大陆自行解决污染问题"
-      github_tag=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep 'Debian_Kernel' | grep '_lts_latest_' | grep 'xanmod' | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}')
-      github_ver=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'deb' | grep 'headers' | awk -F '"' '{print $4}' | awk -F '[/]' '{print $9}' | awk -F '[-]' '{print $3}')
+      github_tag=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep 'Debian_Kernel' | grep '_lts_latest_' | grep 'xanmod' | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}')
+      github_ver=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'deb' | grep 'headers' | awk -F '"' '{print $4}' | awk -F '[/]' '{print $9}' | awk -F '[-]' '{print $3}')
 
       check_empty $github_ver
       echo -e "获取的xanmod lts版本号为:${github_ver}"
@@ -469,8 +469,8 @@ installxanmod() {
       kernel_version=$github_ver
 
       detele_kernel_head
-      headurl=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'deb' | grep 'headers' | awk -F '"' '{print $4}')
-      imgurl=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'deb' | grep -v 'headers' | grep -v 'devel' | awk -F '"' '{print $4}')
+      headurl=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'deb' | grep 'headers' | awk -F '"' '{print $4}')
+      imgurl=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'deb' | grep -v 'headers' | grep -v 'devel' | awk -F '"' '{print $4}')
 
       check_empty $imgurl
       headurl=$(check_cn $headurl)
@@ -494,7 +494,7 @@ installxanmod() {
 #安装bbr2内核 集成到xanmod内核了
 #安装bbrplus 新内核
 #2021.3.15 开始由https://github.com/UJX6N/bbrplus-5.19 替换bbrplusnew
-#2021.4.12 地址更新为https://github.com/ylx2016/kernel/releases
+#2021.4.12 地址更新为https://github.com/tudiedie/kernel/releases
 #2021.9.2 再次改为https://github.com/UJX6N/bbrplus
 #2022.9.6 改为https://github.com/UJX6N/bbrplus-5.19
 #2022.11.24 改为https://github.com/UJX6N/bbrplus-6.x_stable
@@ -516,8 +516,8 @@ installbbrplusnew() {
   if [[ "${OS_type}" == "CentOS" ]]; then
     if [[ ${version} == "7" ]]; then
       if [[ ${bit} == "x86_64" ]]; then
-        #github_tag=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep 'Centos_Kernel' | grep '_latest_bbrplus_' | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}')
-        #github_ver=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep 'headers' | awk -F '"' '{print $4}' | awk -F '[/]' '{print $9}' | awk -F '[-]' '{print $3}' | awk -F '[_]' '{print $1}')
+        #github_tag=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep 'Centos_Kernel' | grep '_latest_bbrplus_' | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}')
+        #github_ver=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep 'headers' | awk -F '"' '{print $4}' | awk -F '[/]' '{print $9}' | awk -F '[-]' '{print $3}' | awk -F '[_]' '{print $1}')
         #echo -e "获取的版本号为:${Green_font_prefix}${github_ver}${Font_color_suffix}"
         kernel_version=${github_ver_plus_num}-bbrplus
         detele_kernel_head
@@ -537,8 +537,8 @@ installbbrplusnew() {
     fi
     if [[ ${version} == "8" ]]; then
       if [[ ${bit} == "x86_64" ]]; then
-        #github_tag=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep 'Centos_Kernel' | grep '_latest_bbrplus_' | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}')
-        #github_ver=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep 'headers' | awk -F '"' '{print $4}' | awk -F '[/]' '{print $9}' | awk -F '[-]' '{print $3}' | awk -F '[_]' '{print $1}')
+        #github_tag=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep 'Centos_Kernel' | grep '_latest_bbrplus_' | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}')
+        #github_ver=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'rpm' | grep 'headers' | awk -F '"' '{print $4}' | awk -F '[/]' '{print $9}' | awk -F '[-]' '{print $3}' | awk -F '[_]' '{print $1}')
         #echo -e "获取的版本号为:${Green_font_prefix}${github_ver}${Font_color_suffix}"
         kernel_version=${github_ver_plus_num}-bbrplus
         detele_kernel_head
@@ -558,8 +558,8 @@ installbbrplusnew() {
     fi
   elif [[ "${OS_type}" == "Debian" ]]; then
     if [[ ${bit} == "x86_64" ]]; then
-      #github_tag=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep 'Ubuntu_Kernel' | grep '_latest_bbrplus_' | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}')
-      #github_ver=$(curl -s 'http s://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'deb' | grep 'headers' | awk -F '"' '{print $4}' | awk -F '[/]' '{print $9}' | awk -F '[-]' '{print $3}' | awk -F '[_]' '{print $1}')
+      #github_tag=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep 'Ubuntu_Kernel' | grep '_latest_bbrplus_' | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}')
+      #github_ver=$(curl -s 'http s://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'deb' | grep 'headers' | awk -F '"' '{print $4}' | awk -F '[/]' '{print $9}' | awk -F '[-]' '{print $3}' | awk -F '[_]' '{print $1}')
       #echo -e "获取的版本号为:${Green_font_prefix}${github_ver}${Font_color_suffix}"
       kernel_version=${github_ver_plus_num}-bbrplus
       detele_kernel_head
@@ -574,8 +574,8 @@ installbbrplusnew() {
       dpkg -i linux-image-d10.deb
       dpkg -i linux-headers-d10.deb
     elif [[ ${bit} == "aarch64" ]]; then
-      #github_tag=$(curl -s 'https://api.github.com/repos/ylx2016/kernel/releases' | grep 'Ubuntu_Kernel' | grep '_latest_bbrplus_' | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}')
-      #github_ver=$(curl -s 'http s://api.github.com/repos/ylx2016/kernel/releases' | grep ${github_tag} | grep 'deb' | grep 'headers' | awk -F '"' '{print $4}' | awk -F '[/]' '{print $9}' | awk -F '[-]' '{print $3}' | awk -F '[_]' '{print $1}')
+      #github_tag=$(curl -s 'https://api.github.com/repos/tudiedie/kernel/releases' | grep 'Ubuntu_Kernel' | grep '_latest_bbrplus_' | head -n 1 | awk -F '"' '{print $4}' | awk -F '[/]' '{print $8}')
+      #github_ver=$(curl -s 'http s://api.github.com/repos/tudiedie/kernel/releases' | grep ${github_tag} | grep 'deb' | grep 'headers' | awk -F '"' '{print $4}' | awk -F '[/]' '{print $9}' | awk -F '[-]' '{print $3}' | awk -F '[_]' '{print $1}')
       #echo -e "获取的版本号为:${Green_font_prefix}${github_ver}${Font_color_suffix}"
       kernel_version=${github_ver_plus_num}-bbrplus
       detele_kernel_head
@@ -1100,7 +1100,7 @@ optimizing_ddcc() {
 Update_Shell() {
   local shell_file
   shell_file="$(readlink -f "$0")"
-  local shell_url="https://raw.githubusercontent.com/ylx2016/Linux-NetSpeed/master/tcpx.sh"
+  local shell_url="https://raw.githubusercontent.com/tudiedie/Linux-NetSpeed/master/tcpx.sh"
 
   # 下载最新版本的脚本
   wget -O "/tmp/tcpx.sh" "$shell_url" &>/dev/null
@@ -1126,7 +1126,7 @@ Update_Shell() {
 #切换到卸载内核版本
 gototcp() {
   clear
-  wget -O tcp.sh "https://github.com/ylx2016/Linux-NetSpeed/raw/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+  wget -O tcp.sh "https://github.com/tudiedie/Linux-NetSpeed/raw/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 }
 
 #切换到秋水逸冰BBR安装脚本
@@ -1141,7 +1141,7 @@ gotodd() {
   echo DD使用git.beta.gs的脚本，知悉
   sleep 1.5
   wget -O NewReinstall.sh https://github.com/fcurrk/reinstall/raw/master/NewReinstall.sh && chmod a+x NewReinstall.sh && bash NewReinstall.sh
-  #wget -qO ~/Network-Reinstall-System-Modify.sh 'https://github.com/ylx2016/reinstall/raw/master/Network-Reinstall-System-Modify.sh' && chmod a+x ~/Network-Reinstall-System-Modify.sh && bash ~/Network-Reinstall-System-Modify.sh -UI_Options
+  #wget -qO ~/Network-Reinstall-System-Modify.sh 'https://github.com/tudiedie/reinstall/raw/master/Network-Reinstall-System-Modify.sh' && chmod a+x ~/Network-Reinstall-System-Modify.sh && bash ~/Network-Reinstall-System-Modify.sh -UI_Options
 }
 
 #禁用IPv6
