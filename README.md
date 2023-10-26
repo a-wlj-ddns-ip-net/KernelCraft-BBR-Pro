@@ -1,11 +1,3 @@
-赞助
-<br>
-支付宝
-<br>
-![20200312144201.png](https://vip1.loli.io/2020/03/12/7IJvKaTcrLBDbtz.png)
-
-[搬瓦工在线库存查询](https://bwg.ylx.me/)
-
 
 预先准备
 ```
