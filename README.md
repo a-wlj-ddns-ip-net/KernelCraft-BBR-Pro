@@ -1,5 +1,5 @@
 ## Linux一键安装常见/最新内核脚本 LotServer/BBRPLUS/BBR2/BBR3
-
+## 一键加速脚本使用教程 
 ### 预先安装wget下载工具，则执行命令：
 ```
 yum -y install wget #CentOS/RedHat
@@ -95,7 +95,7 @@ sysctl net.core.default_qdisc
 <br>
 `sysctl --system`
 
-### 更新日志
+## 更新日志
 1.3.2.7 更新bbr的c7,c8,d9,d10 升级到5.5.3内核；
 <br>
 1.3.2.8 更新bbr的c6,c7,c8,d8,d9,d10 升级到5.5.5内核；
@@ -185,7 +185,7 @@ sysctl net.core.default_qdisc
 2.或者安装内核后，接着开启bbr加速(失败的)，这时候再重启，bbr会在重启后生效(前提是启动时候是安装的内核)。
 2020.6.14 测试锐速是正常的。
 
-### 特别鸣谢
+## 特别鸣谢
 土爹爹博客
 <br>
 https://www.tudiedie.com
