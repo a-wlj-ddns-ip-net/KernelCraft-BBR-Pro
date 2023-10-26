@@ -4,7 +4,7 @@ export PATH
 #=================================================
 #	System Required: CentOS 7/8,Debian/ubuntu,oraclelinux
 #	Description: BBR+BBRplus+Lotserver
-#	Version: 101.0
+#	Version: 101.0.0
 #	Author: 千影,cx9208,YLX,TuDieDie
 #	更新内容及反馈:  https://www.tudiedie.com
 #=================================================
@@ -15,7 +15,7 @@ export PATH
 # SKYBLUE='\033[0;36m'
 # PLAIN='\033[0m'
 
-sh_ver="101.0"
+sh_ver="101.0.0"
 github="raw.githubusercontent.com/tudiedie/Linux-NetSpeed/master"
 
 imgurl=""
