@@ -170,7 +170,7 @@ sysctl net.core.default_qdisc
 
 ### 特别鸣谢
 <br>
-ylx2016作者
+ylx2016原作者
 <br>
 https://blog.ylx.me/
 <br>
