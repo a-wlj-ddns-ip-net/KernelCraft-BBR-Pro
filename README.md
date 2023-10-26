@@ -1,19 +1,19 @@
 ## Linux一键安装常见/最新内核脚本 LotServer/BBRPLUS/BBR2/BBR3
 
-预先安装wget工具，则执行以下命令：
+### 预先安装wget工具，则执行以下命令：
 ```
 yum -y install wget #CentOS
 ```
 ```
 apt-get install wget #Debian/Ubuntu
 ```
-在安装BBR时，不卸载内核版本，则执行以下命令：
+### 在安装BBR时，不卸载内核版本，则执行以下命令：
 
 ```
 wget -O tcpx.sh "https://github.com/tudiedie/Linux-NetSpeed/raw/master/tcpx.sh" && chmod +x tcpx.sh && ./tcpx.sh
 ```
 
-在安装BBR时，卸载内核版本，则执行以下命令：
+### 在安装BBR时，卸载内核版本，则执行以下命令：
 ```
 wget -O tcp.sh "https://github.com/tudiedie/Linux-NetSpeed/raw/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 ```
