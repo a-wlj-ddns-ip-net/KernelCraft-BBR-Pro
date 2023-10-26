@@ -27,43 +27,61 @@ wget -O tcp.sh "https://github.com/tudiedie/Linux-NetSpeed-TuDieDie/raw/master/t
 双持bbr+锐速
 <br>
 bbr 添加
+
 ```
 echo "net.core.default_qdisc=fq" >> /etc/sysctl.d/99-sysctl.conf
 ```
+
 ```
 echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.d/99-sysctl.conf
 ```
+
 ```
 sysctl -p
 ```
+
 编辑锐速文件
+
 ```
 nano /appex/etc/config
 ```
+
 检测代码有BUG，如果锐速正常 运行查看
+
 ```
 bash /appex/bin/lotServer.sh status | grep "LotServer"
 ```
+
 检查bbr 内核默认bbr算法不会有输出
+
 ```
 lsmod | grep bbr
 ```
+
 检查centos安装内核
+
 ```
 grubby --info=ALL|awk -F= '$1=="kernel" {print i++ " : " $2}'
 ```
+
 查看当前支持TCP算法
+
 ```
 cat /proc/sys/net/ipv4/tcp_allowed_congestion_control
 ```
+
 查看当前运行的算法
+
 ```
 cat /proc/sys/net/ipv4/tcp_congestion_control
 ```
+
 查看当前队列算法
+
 ```
 sysctl net.core.default_qdisc
 ```
+
 命令： `uname -a`
 <br>
 作用： 查看系统内核版本号及系统名称
