@@ -1,4 +1,4 @@
-### Linux一键安装常见/最新内核脚本 LotServer/BBRPLUS/BBR2/BBR3
+# Linux一键安装常见/最新内核脚本 LotServer/BBRPLUS/BBR2/BBR3
 ## 执行命令如下：
 
 预先准备
