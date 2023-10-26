@@ -10,12 +10,12 @@ apt-get install wget #Debian/Ubuntu
 ### 在安装BBR时，不卸载内核版本，则执行命令：
 
 ```
-wget -O tcpx.sh "https://github.com/tudiedie/Linux-NetSpeed-TDD/raw/master/tcpx.sh" && chmod +x tcpx.sh && ./tcpx.sh
+wget -O tcpx.sh "https://github.com/tudiedie/Linux-NetSpeed-TuDieDie/raw/master/tcpx.sh" && chmod +x tcpx.sh && ./tcpx.sh
 ```
 
 ### 在安装BBR时，卸载内核版本，则执行命令：
 ```
-wget -O tcp.sh "https://github.com/tudiedie/Linux-NetSpeed-TDD/raw/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+wget -O tcp.sh "https://github.com/tudiedie/Linux-NetSpeed-TuDieDie/raw/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 ```
 
 关联action自动编译内核
@@ -169,6 +169,9 @@ sysctl net.core.default_qdisc
 2020.6.14 测试锐速是正常的。
 
 ### 特别鸣谢
+土爹爹博客
+<br>
+https://www.tudiedie.com
 <br>
 ylx2016原作者
 <br>
