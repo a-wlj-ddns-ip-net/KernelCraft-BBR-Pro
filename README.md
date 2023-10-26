@@ -170,7 +170,8 @@ sysctl net.core.default_qdisc
 
 ### 特别鸣谢
 <br>
-原脚本作者
+ylx2016作者
+<br>
 https://blog.ylx.me/
 <br>
 bbsplus算法原作者
