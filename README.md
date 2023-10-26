@@ -20,7 +20,7 @@ wget -O tcp.sh "https://github.com/tudiedie/Linux-NetSpeed/raw/master/tcp.sh" &&
 ```
 关联action自动编译内核
 
-[https://github.com/ylx2016/kernel/](https://github.com/ylx2016/kernel/)
+[https://github.com/tudiedie/kernel/](https://github.com/tudiedie/kernel/)
 
 双持bbr+锐速
 <br>
