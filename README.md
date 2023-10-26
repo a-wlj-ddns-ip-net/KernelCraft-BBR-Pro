@@ -18,7 +18,7 @@ wget -O tcpx.sh "https://github.com/tudiedie/Linux-NetSpeed-TuDieDie/raw/master/
 wget -O tcp.sh "https://github.com/tudiedie/Linux-NetSpeed-TuDieDie/raw/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 ```
 
-关联action自动编译内核
+### 关联action自动编译内核
 
 [https://github.com/tudiedie/kernel/](https://github.com/tudiedie/kernel/)
 
