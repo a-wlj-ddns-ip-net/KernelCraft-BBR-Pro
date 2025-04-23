@@ -2112,3 +2112,4 @@ check_version
 [[ "${OS_type}" == "Debian" ]] && [[ "${OS_type}" == "CentOS" ]] && echo -e "${Error} 本脚本不支持当前系统 ${release} !" && exit 1
 check_github
 start_menu
+#vtexs
