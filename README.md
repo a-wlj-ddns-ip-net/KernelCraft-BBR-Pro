@@ -261,3 +261,9 @@ https://wiki.ubuntu.com/Releases
 https://wiki.debian.org/LTS
 <br>
 https://wiki.centos.org/zh/About/Product
+
+## 赞助声明
+<br>
+本项目由VTEXS的(开源免费计划)提供算力支持<br>
+感谢VTEXS<br>
+https://vtexs.com
